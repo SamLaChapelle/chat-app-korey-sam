@@ -1,19 +1,24 @@
+import React from "react"
+import { useState, useEffect} from "react"
+import { Switch, Route, BrowserRouter, Link } from "react-router-dom"
+import Home from "./components/home"
+import ChatRooms from "./components/chatrooms"
+
 import './App.css';
 
+
 function App() {
+
+  const [user, setUser] = useState(null)
+
   return (
-    <div>
-      <header>
-        <h1 id="mainTitle">!CHAT ROOM</h1>
-        <form id="mainForm" action="/main" method="POST">
-          <h1 class="mainInputTitles">ENTER A USERNAME:</h1>
-          <input type="text" name="userName" placeholder="Username"/>
-          <h1 class="mainInputTitles">CHAT ROOM NAME:</h1>
-          <input type="text" name="chatRoom" placeholder="Chat Room"/>
-          <input type="submit" value="Connect"/>
-        </form>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        {console.log(document.cookie)}
+        <Route exact path="/" render={() => <Home user={user} setUser={setUser} />} />
+        <Route path="/chatrooms/:room" render={() => <ChatRooms user={user}/>} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 

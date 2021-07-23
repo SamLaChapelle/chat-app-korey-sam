@@ -20,10 +20,24 @@ const messageSchema = new mongoose.Schema({
 
 const MainMessage = mongoose.model("MainMessage", messageSchema)
 
+const VGMessage = mongoose.model("VideoGameMessage", messageSchema)
+
+const MusicMessage = mongoose.model("MusicMessage", messageSchema)
+
 app.get("/chatrooms/main", async (req, res) => {
   let mainMessages = await MainMessage.find({})
   console.log(mainMessages)
   res.json(mainMessages)
+})
+app.get("/chatrooms/videogames", async (req, res) => {
+  let vgMessages = await VGMessage.find({})
+  console.log(vgMessages)
+  res.json(vgMessages)
+})
+app.get("/chatrooms/music", async (req, res) => {
+  let musicMessages = await MusicMessage.find({})
+  console.log(musicMessages)
+  res.json(musicMessages)
 })
 
 app.post("/chatrooms/main", async(req, res) => {
@@ -33,11 +47,38 @@ app.post("/chatrooms/main", async(req, res) => {
     body: req.body.message
   })
 
-  res.cookie("username", `${req.body.username}`)
+  //res.cookie("username", `${req.body.username}`)
 
   await message.save();
 
   res.redirect("/chatrooms/main")
+})
+
+app.post("/chatrooms/videogames", async(req, res) => {
+  const message = new VGMessage({
+    time: Date.now(),
+    author: req.body.username,
+    body: req.body.message
+  })
+
+  //res.cookie("username", `${req.body.username}`)
+
+  await message.save();
+
+  res.redirect("/chatrooms/videogames")
+})
+app.post("/chatrooms/music", async(req, res) => {
+  const message = new MusicMessage({
+    time: Date.now(),
+    author: req.body.username,
+    body: req.body.message
+  })
+
+  //res.cookie("username", `${req.body.username}`)
+
+  await message.save();
+
+  res.redirect("/chatrooms/music")
 })
 
 app.listen(port, () => {

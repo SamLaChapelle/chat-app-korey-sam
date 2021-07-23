@@ -2,7 +2,15 @@
 
 * {
   margin: 0;
-  background-color: rgb(103, 151, 255);
+}
+
+header {
+  background: url("./images/notebook.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
 }
 
 #mainTitle {
@@ -14,9 +22,66 @@
 
 #mainForm {
   text-align: center;
+  padding-top: 2vh
 }
 
 .mainInputTitles {
   font-family: "Special Elite", cursive;
   padding-top: 10vh;
+}
+
+.homeButtons{
+  width: 5vw;
+  margin-left: 1vh;
+  margin-right: 1vh;
+}
+
+#chatroom{
+  background: url("./images/notebook.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+}
+
+#chatroomTitle{
+  font-family: "Special Elite", cursive;
+  font-size: 20vh;
+  text-align: center;
+  padding-top: 5vh;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+#chatroomTitle:hover{
+  color: red
+}
+
+#chatbox{
+  display: flex;
+  flex-direction: column;
+}
+
+#chatContainer{
+  border: solid black 2vh;
+  width: 40vw;
+  height: 56vh;
+  margin-left: 5vw;
+}
+
+#userTitle{
+  font-family: "Special Elite", cursive;
+  text-align: center;
+  background-color: grey;
+}
+
+#textBox{
+  height: 3.5vh;
+}
+
+#refreshButton{
+  float: right;
 }

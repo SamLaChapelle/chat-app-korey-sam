@@ -33,7 +33,7 @@ app.post("/chatrooms/main", async(req, res) => {
     body: req.body.message
   })
 
-  res.cookie("username", `${req.body.username}`)
+  //res.cookie("username", `${req.body.username}`)
 
   await message.save();
 

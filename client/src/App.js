@@ -11,6 +11,10 @@ function App() {
 
   const [user, setUser] = useState(null)
 
+  if(document.cookie !== "" && !user){
+    setUser(document.cookie.slice(9))
+  }
+
   return (
     <BrowserRouter>
       <Switch>

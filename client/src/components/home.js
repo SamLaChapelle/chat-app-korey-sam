@@ -6,7 +6,12 @@ function Home({ user, setUser }) {
   function handleSubmit(evt) {
     evt.preventDefault();
     setUser(evt.target.username.value)
+    document.cookie = ""
+    console.log(document.cookie)
+    document.cookie = `username=${user}`
+    console.log(document.cookie)
     evt.target.username.value = ""
+     
   }
 
     return (

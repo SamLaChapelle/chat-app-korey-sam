@@ -45,7 +45,9 @@ function ChatRooms({ user }) {
             placeholder="Enter your message here..."
           />
           <input type="submit" value="Enter" />
+        </form>
           <button>REFRESH</button>
+        </div>
           <div>
             <p>Current Room: {room.toUpperCase()}</p>
             <p>Other Rooms:</p>
@@ -58,8 +60,7 @@ function ChatRooms({ user }) {
                 </Link>
               )
             )}
-          </div>
-        </form>
+          
       </div>
     </div>
   );

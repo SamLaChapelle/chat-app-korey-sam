@@ -11,12 +11,16 @@ function App() {
 
   const [user, setUser] = useState(null)
 
+  if(document.cookie !== "" && !user ) {
+    setUser(document.cookie.slice(9))
+  }
+
   return (
     <BrowserRouter>
       <Switch>
         {console.log(document.cookie)}
         <Route exact path="/" render={() => <Home user={user} setUser={setUser} />} />
-        <Route path="/chatrooms/:room" render={() => <ChatRooms user={user}/>} />
+        <Route path="/chatrooms/:room" render={() => <ChatRooms user={user} />} />
       </Switch>
     </BrowserRouter>
   );

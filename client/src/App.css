@@ -63,23 +63,61 @@ a {
 #chatbox{
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #chatContainer{
-  border: solid black 2vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border:ridge rgb(0, 0, 0) 3vh;
   width: 40vw;
-  height: 56vh;
-  margin-left: 5vw;
+  height: 60vh;
 }
 
 #userTitle{
   font-family: "Special Elite", cursive;
   text-align: center;
-  background-color: grey;
+  background-color: rgb(255, 255, 255);
+  border: ridge rgb(39, 39, 39) 1vh;
+  padding-top: 1vh;
+}
+
+#content{
+  display: flex;
+  justify-content: space-evenly;
+  height: 47vh;
+}
+
+#chatList{
+  width: 9.5vw;
+  border: ridge rgb(82, 0, 0) 1vh;
+  background-color: white;
 }
 
 #textBox{
   height: 3.5vh;
+  width: 30vw;
+}
+
+#enterButton{
+  height: 4.2vh;
+  width: 9.57vw;
+}
+
+#messages{
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  height: 45.5vh;
+  width: 30vw;
+  border: ridge rgb(97, 166, 255) 1vh;
+  background-color: rgb(255, 255, 255);
+}
+
+#messageForm{
+  width: 40vw;
 }
 
 #refreshButton{

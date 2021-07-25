@@ -1,7 +1,6 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
 const express = require("express");
-const path = require("path");
 
 const port = process.env.PORT || 8000;
 const app = express();
@@ -26,17 +25,14 @@ const MusicMessage = mongoose.model("MusicMessage", messageSchema)
 
 app.get("/chatrooms/main", async (req, res) => {
   let mainMessages = await MainMessage.find({})
-  console.log(mainMessages)
   res.json(mainMessages)
 })
 app.get("/chatrooms/videogames", async (req, res) => {
   let vgMessages = await VGMessage.find({})
-  console.log(vgMessages)
   res.json(vgMessages)
 })
 app.get("/chatrooms/music", async (req, res) => {
   let musicMessages = await MusicMessage.find({})
-  console.log(musicMessages)
   res.json(musicMessages)
 })
 
@@ -46,8 +42,6 @@ app.post("/chatrooms/main", async(req, res) => {
     author: req.body.username,
     body: req.body.message
   })
-
-  //res.cookie("username", `${req.body.username}`)
 
   await message.save();
 

@@ -31,7 +31,7 @@ header {
 }
 
 .homeButtons{
-  width: 5vw;
+  width: 5rem;
   margin-left: 1vh;
   margin-right: 1vh;
 }
@@ -70,54 +70,52 @@ a {
 #chatContainer{
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  border:ridge rgb(0, 0, 0) 3vh;
-  width: 40vw;
-  height: 60vh;
+  border:ridge rgb(0, 0, 0) 1.5rem;
+  width: 36rem;
+  height: 30rem;
 }
 
 #userTitle{
   font-family: "Special Elite", cursive;
   text-align: center;
   background-color: rgb(255, 255, 255);
-  border: ridge rgb(39, 39, 39) 1vh;
-  padding-top: 1vh;
+  border: ridge rgb(39, 39, 39) .45rem;
+  padding-top: .5rem;
 }
 
 #content{
   display: flex;
   justify-content: space-evenly;
-  height: 47vh;
 }
 
 #chatList{
-  width: 9.5vw;
-  border: ridge rgb(82, 0, 0) 1vh;
+  width: 8.5rem;
+  border: ridge rgb(82, 0, 0) .5rem;
   background-color: white;
 }
 
 #textBox{
-  height: 3.5vh;
-  width: 30vw;
+  height: 2.65rem;
+  width: 26rem;
 }
 
 #enterButton{
-  height: 4.2vh;
-  width: 9.57vw;
+  height: 3rem;
+  width: 9.5rem;
 }
 
 #messages{
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
-  height: 45.5vh;
-  width: 30vw;
-  border: ridge rgb(97, 166, 255) 1vh;
+  height: 21.3rem;
+  width: 25.6rem;
+  border: ridge rgb(97, 166, 255) .5rem;
   background-color: rgb(255, 255, 255);
 }
 
 #messageForm{
-  width: 40vw;
+  width: 36rem;
 }
 
 #refreshButton{

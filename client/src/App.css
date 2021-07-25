@@ -1,9 +1,10 @@
+/* importing google font */
 @import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
-
+/* for everything set margin to 0 */
 * {
   margin: 0;
 }
-
+/* Home page header */
 header {
   background: url("./images/notebook.png");
   background-size: cover;
@@ -12,30 +13,30 @@ header {
   width: 100vw;
   text-align: center;
 }
-
+/* Home page title */
 #mainTitle {
   font-family: "Special Elite", cursive;
   font-size: 20vh;
   text-align: center;
   padding-top: 10vh;
 }
-
+/* Home page form */
 #mainForm {
   text-align: center;
   padding-top: 2vh
 }
-
+/* Home page titles */
 .mainInputTitles {
   font-family: "Special Elite", cursive;
   padding-top: 10vh;
 }
-
+/* Home page buttons */
 .homeButtons{
   width: 5rem;
   margin-left: 1vh;
   margin-right: 1vh;
 }
-
+/* Chat Room route */
 #chatroom{
   background: url("./images/notebook.png");
   background-size: cover;
@@ -43,7 +44,7 @@ header {
   height: 100vh;
   width: 100vw;
 }
-
+/* Chat Room title */
 #chatroomTitle{
   font-family: "Special Elite", cursive;
   font-size: 20vh;
@@ -51,59 +52,59 @@ header {
   padding-top: 5vh;
   color: black;
 }
-
+/* Chat Room title linked to home */
 a {
   text-decoration: none;
 }
-
+/* Chat Room title: hover to let user know its clickable */
 #chatroomTitle:hover{
   color: red
 }
-
+/* Chat Room chat box housing everything else */
 #chatbox{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
+/* Chat Room chat messages display */
 #chatContainer{
   display: flex;
   flex-direction: column;
-  border:ridge rgb(0, 0, 0) 1.5rem;
+  border:ridge rgb(49, 49, 49) 1.5rem;
   width: 36rem;
   height: 30rem;
 }
-
+/* Chat Room user title */
 #userTitle{
   font-family: "Special Elite", cursive;
   text-align: center;
   background-color: rgb(255, 255, 255);
-  border: ridge rgb(39, 39, 39) .45rem;
+  border: ridge rgb(255, 145, 145) .45rem;
   padding-top: .5rem;
 }
-
+/* Chat Room everything below user title */
 #content{
   display: flex;
   justify-content: space-evenly;
 }
-
+/* Chat Room other chat rooms list */
 #chatList{
   width: 8.5rem;
   border: ridge rgb(82, 0, 0) .5rem;
   background-color: white;
 }
-
+/* Chat Room text box where user types their message */
 #textBox{
   height: 2.65rem;
   width: 26rem;
 }
-
+/* Chat Room enter button */
 #enterButton{
   height: 3rem;
   width: 9.5rem;
 }
-
+/* Chat Room procedurally generated messages */
 #messages{
   display: flex;
   flex-direction: column;
@@ -113,11 +114,16 @@ a {
   border: ridge rgb(97, 166, 255) .5rem;
   background-color: rgb(255, 255, 255);
 }
-
+/* Chat Room individual messages */
+.message{
+  word-wrap: break-word;
+  border-bottom: solid rgb(97, 166, 255) .25rem;
+}
+/* Chat Room message form where user types message and enter button */
 #messageForm{
   width: 36rem;
 }
-
+/* Chat Room refresh button */
 #refreshButton{
   float: right;
 }
